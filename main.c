@@ -1,14 +1,16 @@
 #include <stdio.h>
 
 int main(void) {
-    int w, h;
-     scanf("%d", &w);
-     scanf("%d", &h);
-     long long area = (long long)w * h;
-     double ratio = (double)w/h;
-     printf("%lld\n%.2f", area, ratio);
-     // TODO: compute the area and the width-to-height ratio,
-     // then print them on two lines as the exercise describes.
-     return 0;
+    int nums[5];
+    for (int i = 0; i < 5; i++) scanf("%d", &nums[i]);
 
+    int best = 0;
+    for (int i = 0; i<5; i++) {
+        if (nums[i] > best) {
+            best= nums[i];
+        }
+    }
+
+    printf("%d\n", best);
+    return 0;
 }
