@@ -1,18 +1,11 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(void) {
-    /* Already done for you: read one line of text into name and drop the
-       Enter key from its end. The Strings lesson explains how this works. */
-    char name[256] = "";
-    if (fgets(name, sizeof name, stdin) == NULL) {
-        name[0] = '\0';
-    }
-    name[strcspn(name, "\r\n")] = '\0';
-
-    /* TODO: print the two lines described in the exercise.
-       Use a %s placeholder for name; do not type any name yourself. */
-    printf("Hello, %s!\nWelcome to C.", name);
-
+    double test = 0.0;
+    double test2 = 0.0;
+    scanf("%lf\n%lf", &test, &test2);
+    double sum = test+test2;
+    int intsum = (int)sum;
+    printf("%f\n%d", sum,intsum);
     return 0;
 }
