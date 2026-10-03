@@ -4,7 +4,7 @@ int main(void) {
     int w, h;
      scanf("%d", &w);
      scanf("%d", &h);
-     long long area = w * h;
+     long long area = (long long)w * h;
      double ratio = (double)w/h;
      printf("%lld\n%.2f", area, ratio);
      // TODO: compute the area and the width-to-height ratio,
