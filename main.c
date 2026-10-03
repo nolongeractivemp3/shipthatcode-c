@@ -1,11 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    double test = 0.0;
-    double test2 = 0.0;
-    scanf("%lf\n%lf", &test, &test2);
-    double sum = test+test2;
-    int intsum = (int)sum;
-    printf("%f\n%d", sum,intsum);
-    return 0;
+    int w, h;
+     scanf("%d", &w);
+     scanf("%d", &h);
+     long long area = w * h;
+     double ratio = (double)w/h;
+     printf("%lld \n %.2f", area, ratio);
+     // TODO: compute the area and the width-to-height ratio,
+     // then print them on two lines as the exercise describes.
+     return 0;
+
 }
