@@ -12,6 +12,7 @@ int main(void) {
 
     /* TODO: print the two lines described in the exercise.
        Use a %s placeholder for name; do not type any name yourself. */
+    printf("Hello, %s!\nWelcome to C.", name);
 
     return 0;
 }
