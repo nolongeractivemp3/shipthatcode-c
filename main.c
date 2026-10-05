@@ -1,16 +1,13 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void) {
-    int nums[5];
-    for (int i = 0; i < 5; i++) scanf("%d", &nums[i]);
+    char buf[100] = "";
+    fgets(buf, sizeof buf, stdin);
 
-    int best = nums[0];
-    for (int i = 0; i<5; i++) {
-        if (nums[i] > best) {
-            best= nums[i];
-        }
+    for (int i=0; !(buf[i] == '\0'); i++) {
+        if (buf[i] == '\n') {buf[i] = '\0';}
     }
-
-    printf("%d\n", best);
+    printf("%d\n", (int)strlen(buf));
     return 0;
 }
