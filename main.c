@@ -1,13 +1,25 @@
+
 #include <stdio.h>
-#include <string.h>
 
 int main(void) {
-    char buf[100] = "";
-    fgets(buf, sizeof buf, stdin);
-
-    for (int i=0; !(buf[i] == '\0'); i++) {
-        if (buf[i] == '\n') {buf[i] = '\0';}
+    int n;
+    scanf("%d", &n);
+    int resultof3 = n%3;
+    int resultof5 = n%5;
+    if (!resultof5 && !resultof3) {
+        printf("FizzBuzz");
+    } else if (!resultof3) {
+        printf("Fizz");
+    } else if (!resultof5) {
+        printf("Buzz");
+    } else {
+        printf("%d", n);
     }
-    printf("%d\n", (int)strlen(buf));
+    /* TODO: print exactly one line:
+         multiple of 3 and 5  -> FizzBuzz
+         multiple of 3 only   -> Fizz
+         multiple of 5 only   -> Buzz
+         anything else        -> the number itself */
+
     return 0;
 }
