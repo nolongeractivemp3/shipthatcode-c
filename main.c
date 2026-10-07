@@ -1,25 +1,16 @@
 #include <stdio.h>
+#include <stdnoreturn.h>
 
-/* Return value limited to the range lo..hi (lo <= hi is guaranteed). */
-int clamp(int value, int lo, int hi) {
-  /* TODO: return lo, hi, or value itself, whichever applies. */
-  int result = value;
-  if (result > hi) {
-    result = hi;
-  } else if (result < lo) {
-    result = lo;
-  }
-  return result;
+void swap(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
 }
 
 int main(void) {
-  int lo, hi, n;
-  scanf("%d %d", &lo, &hi);
-  scanf("%d", &n);
-  for (int i = 0; i < n; i++) {
-    int x;
-    scanf("%d", &x);
-    printf("%d\n", clamp(x, lo, hi));
-  }
+  int a, b;
+  scanf("%d %d", &a, &b);
+  swap(&a, &b);
+  printf("%d %d\n", a, b);
   return 0;
 }
