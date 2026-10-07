@@ -1,16 +1,25 @@
 #include <stdio.h>
 
+/* Return value limited to the range lo..hi (lo <= hi is guaranteed). */
+int clamp(int value, int lo, int hi) {
+  /* TODO: return lo, hi, or value itself, whichever applies. */
+  int result = value;
+  if (result > hi) {
+    result = hi;
+  } else if (result < lo) {
+    result = lo;
+  }
+  return result;
+}
+
 int main(void) {
-    int n;
-    scanf("%d", &n);
-    long long result = 0;
-    long imat = 1;
-     while (!(imat>n)) {
-        result = result +imat;
-        imat = imat+2;
-
-     }
-
-    printf("%lld", result);
-    return 0;
+  int lo, hi, n;
+  scanf("%d %d", &lo, &hi);
+  scanf("%d", &n);
+  for (int i = 0; i < n; i++) {
+    int x;
+    scanf("%d", &x);
+    printf("%d\n", clamp(x, lo, hi));
+  }
+  return 0;
 }
