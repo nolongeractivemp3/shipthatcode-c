@@ -24,7 +24,7 @@ int main(void) {
   for (int i = n; n > 0; n--) {
     printf("%d ", nums[n - 1]);
   }
-  printf("%ld", sum);
+  printf("\n%ld", sum);
   free(nums);
   return 0;
 }
