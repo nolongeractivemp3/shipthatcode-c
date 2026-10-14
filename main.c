@@ -66,7 +66,7 @@ int main(void) {
      line in it as <number>:<text> (numbered from 1, no newline inside
      the text), close it, then print the total as below. */
   int total = 0;
-  char buf[128];
+  char buf[LINE_SIZE];
   FILE *r = fopen(path, "r");   /* w NOT closed yet */
   while (fgets(buf, sizeof buf, r) != NULL) {
       total ++;
